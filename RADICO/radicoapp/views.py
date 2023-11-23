@@ -7,4 +7,4 @@ def show(r):
     star_dict={'startup_list':startup_list}
 
 
-    return render(r,'radico/show.html')
+    return render(r,'radico/show.html',context=star_dict)

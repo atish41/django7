@@ -6,27 +6,26 @@
 </head>
 <body>
 {% if startup_list %}
-<table>
+<table border="1" margin="auto" align="center">
   <tr>
     <th>startup_no</th>
     <th>startup_name</th>
     <th>startup_domain</th>
       <th>startup_city</th>
-
   </tr>
-  { % for prd in startup_list %}
-     <tr>
+    {% for prd in startup_list %}
+    <tr>
     <td>{{prd.startup_no}}</td>
     <td>{{prd.startup_name}}</td>
     <td>{{prd.startup_domain}}</td>
-      <td>{{prd.startup_city}}</td>
-{% endfor %}
-  </tr>
+        <td>{{prd.startup_city}}</td>
+    </tr>
+    {%endfor %}
 
 </table>
 {%else%}
 <h1>No data found</h1>
 
-{%endif %}
+{%endif%}
 </body>
 </html>
